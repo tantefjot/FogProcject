@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 kan det lade sig gøre?
+=======
+hvad så ?
+>>>>>>> 18be6d199d14efa552bbfe3e94adf1c9755bd597
+nu lykkes det!!!1
