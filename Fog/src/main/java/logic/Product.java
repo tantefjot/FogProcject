@@ -27,6 +27,17 @@ public class Product {
         this.productWidth = productWidth;
     }
 
+    public Product(String productName, double productPrice, int productLength, int productHeigth, int productWidth) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.productLength = productLength;
+        this.productHeigth = productHeigth;
+        this.productWidth = productWidth;
+    }
+    
+    
+    
+
     public int getProduct_id() {
         return product_id;
     }
@@ -73,6 +84,11 @@ public class Product {
 
     public void setProductWidth(int productWidth) {
         this.productWidth = productWidth;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "product_id=" + product_id + ", productName=" + productName + ", productPrice=" + productPrice + ", productLength=" + productLength + ", productHeigth=" + productHeigth + ", productWidth=" + productWidth + '}';
     }
 
     

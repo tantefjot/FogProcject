@@ -20,11 +20,11 @@ import java.util.logging.Logger;
     
     public class DataBase {
     
-private static String driver ="com.mysql.cj.jdbc.Driver";
-private static  String url = "jdbc:mysql://165.227.129.80:3306/Lego";
-private static String user = "testuser";
-private static String password ="sonA2650";
-private static Connection conn =null;
+     private static String  driver ="com.mysql.cj.jdbc.Driver";
+    private static String url = "jdbc:mysql://165.227.129.80:3306/Fogdb2";
+    private static String user = "testuser";
+    private static String password = "sonA2650";
+    private static Connection conn =null;
 
 
 public static Connection getConnection() throws SQLException{
