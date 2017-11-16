@@ -21,9 +21,9 @@ import java.util.logging.Logger;
     public class DataBase {
     
 private static String driver ="com.mysql.cj.jdbc.Driver";
-private static  String url = "jdbc:mysql://165.227.129.80:3306/Lego";
-private static String user = "testuser";
-private static String password ="sonA2650";
+private static  String url = "jdbc:mysql://127.0.0.1:3306/fogDB";
+private static String user = "root";
+private static String password ="nuldessert";
 private static Connection conn =null;
 
 
