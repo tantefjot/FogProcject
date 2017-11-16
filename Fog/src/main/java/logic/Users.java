@@ -125,6 +125,14 @@ public class Users {
         this.phone = phone;
     }
 
+    @Override
+    public String toString() {
+        return "Users{" + "user_id=" + user_id + ", user_name=" + user_name + ", user_password=" + user_password + ", user_email=" + user_email + ", firstName=" + firstName + ", lastName=" + lastName + ", streetName=" + streetName + ", streetNumber=" + streetNumber + ", city=" + city + ", zipCode=" + zipCode + ", phone=" + phone + '}';
+    }
+
  
     
+
+
+
 }

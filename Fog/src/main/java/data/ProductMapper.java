@@ -20,20 +20,20 @@ import logic.Product;
  */
 public class ProductMapper {
     
-    public void createProduct(int product_id,String productName,double productPrice,int productLength,int productHeigth, int productWidth) throws SQLException{
+    public void createProduct(String productName,double productPrice,int productLength,int productHeigth, int productWidth) throws SQLException{
        
          
-            String SQL ="insert into products (product_name,prodduct_length,product_heigth,product_width,product_price,product_id)"
-                    + " values (?,?,?,?,?,?)";
+            String SQL ="insert into products (product_name,prodduct_length,product_heigth,product_width,product_price)"
+                    + " values (?,?,?,?,?)";
                PreparedStatement ps = data.DataBase.getConnection().prepareStatement(SQL);
             //PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
             
             ps.setString(1,productName);
             ps.setInt(2, productLength);
-            ps.setInt(3, product_id);
-            ps.setInt(4, productWidth);
-            ps.setInt(5, productHeigth);
-            ps.setDouble(6,productPrice);
+          
+            ps.setInt(3, productWidth);
+            ps.setInt(4, productHeigth);
+            ps.setDouble(5,productPrice);
             ps.executeUpdate();
                 
             
@@ -137,7 +137,7 @@ public class ProductMapper {
         Product pro;
         
         
-      pm.createProduct(12, "dette product", 11.5, 120, 120, 150);
+      pm.createProduct( "product", 12.5, 125, 120, 250);
 
 
 //for(Product product : pm.getAllproducts()){
