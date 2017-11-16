@@ -99,4 +99,29 @@ String tagtype = c.getTagtype();
         }
         return c;
     }
+    
+    
+    
+    
+    public void deleteCarport(int id) throws SQLException{
+        String sql = "DELETE FROM Carport WHERE carportID = ? " + id +";";
+        PreparedStatement ps = data.DataBase.getConnection().prepareStatement(sql);
+        ps.execute();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
