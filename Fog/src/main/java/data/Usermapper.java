@@ -26,16 +26,14 @@ public class Usermapper {
   String user_email = u.getUser_email();
     String firstName = u.getFirstName();
   String lastName = u.getLastName();
-   String streetName = u.getStreetName();
-int streetNumber = u.getStreetNumber();
- String city = u.getCity();
+  String city = u.getCity();
    String zipCode = u.getZipCode();
   String phone = u.getPhone();
    String address = u.getAddress();
    
    
         try {
-            String sql = "INSERT INTO users (user_id,userName, userPassword, email,firstname,lastname,streetname,streetnumber,city,zipcod,phone,address) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO users (user_id,userName, userPassword, email,fristname,lastname,city,zipcode,phone,address) values(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = data.DataBase.getConnection().prepareStatement(sql);
             ps.setInt(1, user_id);
             ps.setString(2, user_name);
@@ -43,12 +41,10 @@ int streetNumber = u.getStreetNumber();
             ps.setString(4, user_email);
             ps.setString(5, firstName);
             ps.setString(6, lastName);
-            ps.setString(7, streetName);
-            ps.setInt(8, streetNumber);
-            ps.setString(9, city);
-            ps.setString(10, zipCode);
-            ps.setString(11, phone);
-            ps.setString(12, address);
+            ps.setString(7, city);
+            ps.setString(8, zipCode);
+            ps.setString(9, phone);
+            ps.setString(10, address);
             ps.executeUpdate();
         } catch (Exception e) {
         }
@@ -63,16 +59,15 @@ int streetNumber = u.getStreetNumber();
             int user_id = rs.getInt("user_id");
             String user_name = rs.getString("userName");
             String user_password = rs.getString("userPassword");
-            String user_email = rs.getString("user_email");
-            String firstName = rs.getString("firstname");
+            String user_email = rs.getString("email");
+            String firstName = rs.getString("fristname");
             String lastName = rs.getString("lastname");
-            String streetName = rs.getString("street");
-            int streetNumber = rs.getInt("streetnumber");
+         
             String city = rs.getString("city");
             String zipCode = rs.getString("zipcode");
             String phone = rs.getString("phone");
             String address = rs.getString("address");
-            users.add(new Users(user_id, user_name, user_password, user_email, firstName, lastName, streetName, streetNumber, city, zipCode, phone, address));
+            users.add(new Users(user_id, user_name, user_password, user_email, firstName, lastName, city, zipCode, phone, address));
         }
         return users;
     }
@@ -88,18 +83,16 @@ int streetNumber = u.getStreetNumber();
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 int user_id = rs.getInt("user_id");
-                String user_name = rs.getString("user_name");
-                String user_password = rs.getString("user_password");
-                String user_email = rs.getString("user_email");
-                String firstName = rs.getString("firstname");
+                String user_name = rs.getString("userName");
+                String user_password = rs.getString("userPassword");
+                String user_email = rs.getString("email");
+                String firstName = rs.getString("fristname");
                 String lastName = rs.getString("lastname");
-                String streetName = rs.getString("street");
-                int streetNumber = rs.getInt("streetnumber");
                 String city = rs.getString("city");
                 String zipCode = rs.getString("zipcode");
                 String phone = rs.getString("phone");
                 String address = rs.getString("address");
-                use = new Users(user_id, user_name, user_password, user_email, firstName, lastName, streetName, streetNumber, city, zipCode, phone, address);
+                use = new Users(user_id, user_name, user_password, user_email, firstName, lastName, city, zipCode, phone, address);
             }
         } catch (SQLException sq) {
             sq.printStackTrace();
@@ -118,25 +111,33 @@ int streetNumber = u.getStreetNumber();
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 int user_id = rs.getInt("user_id");
-                String user_name = rs.getString("user_name");
+                String user_name = rs.getString("userName");
                 String user_password = rs.getString("user_password");
                 String user_email = rs.getString("email");
                String firstName = rs.getString("firstname");
                 String lastName = rs.getString("lastname");
-                String streetName = rs.getString("street");
-                int streetNumber = rs.getInt("streetnumber");
+           
                 String city = rs.getString("city");
                 String zipCode = rs.getString("zipcode");
                 String phone = rs.getString("phone");
                 String address = rs.getString("address");
 
-                user = new Users(user_id, user_name, user_password, user_email, firstName, lastName, streetName, streetNumber, city, zipCode, phone, address);
+                user = new Users(user_id, user_name, user_password, user_email, firstName, lastName, city, zipCode, phone, address);
             }
 
         } catch (SQLException sq) {
             sq.printStackTrace();
         }
         return user;
+    }
+    
+    
+    public static void main(String[] args) {
+        Usermapper um = new Usermapper();
+        
+       
+    
+     
     }
 
 }

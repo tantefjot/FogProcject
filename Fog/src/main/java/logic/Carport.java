@@ -10,64 +10,133 @@ package logic;
  * @author Rikke Nielsen
  */
 public class Carport {
-  private int carport_id;
-private  String carport_name;
-private int antal_Reglar;
-private int antal_spær;
-private int antal_rem;
-private int antal_søm;
-private int antal_Stern;
-private int antal_Lægter;
-private int antal_Skruer;
-private int antal_beslag;
-private int antal_Beklædning;
-private int antal_Vindskede;
-private String tagtype; 
-private int taghældning; 
-private  int product_id;
-private  int ground_id;
-private int totalprice;
+ 
+        private String carportName;
+        private int carportWidth;
+        private int carportLength;
+        private int carportHeight;
+        private int stolpe_højde;
+        private int spær_Længde;
+        private int carport_id;
+        private int reglar_længde;
+        private int lægte_længde;
+        private int sternBrædt_Længde;
+        private int Vindskede_længde; 
+        private int Rem;
+        private int skruer;
+        private int taghældning;
+        private double totalprice;
+        private int rem_længde;
+        private int tag_bredde;
+        private int tag_højde;
+        private int tag_udhæng;
+        private int gavl_bræt_længde;
+        private int gavl_bræt_højde; 
+        private int gavl_bræt_bredde;
+        private int product_id;
 
-    public Carport(int carport_id, String carport_name, int antal_Reglar, int antal_spær, int antal_rem, int antal_søm, int antal_Stern, int antal_Lægter, int antal_Skruer, int antal_beslag, int antal_Beklædning, int antal_Vindskede, String tagtype, int taghældning, int product_id, int ground_id, int totalprice) {
+    public Carport(String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_højde, int spær_Længde, int carport_id, int reglar_længde, int lægte_længde, int sternBrædt_Længde, int Vindskede_længde, int Rem, int skruer, int taghældning, double totalprice, int rem_længde, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde, int product_id ) {
+        this.carportName = carportName;
+        this.carportWidth = carportWidth;
+        this.carportLength = carportLength;
+        this.carportHeight = carportHeight;
+        this.stolpe_højde = stolpe_højde;
+        this.spær_Længde = spær_Længde;
         this.carport_id = carport_id;
-        this.carport_name = carport_name;
-        this.antal_Reglar = antal_Reglar;
-        this.antal_spær = antal_spær;
-        this.antal_rem = antal_rem;
-        this.antal_søm = antal_søm;
-        this.antal_Stern = antal_Stern;
-        this.antal_Lægter = antal_Lægter;
-        this.antal_Skruer = antal_Skruer;
-        this.antal_beslag = antal_beslag;
-        this.antal_Beklædning = antal_Beklædning;
-        this.antal_Vindskede = antal_Vindskede;
-        this.tagtype = tagtype;
+        this.reglar_længde = reglar_længde;
+        this.lægte_længde = lægte_længde;
+        this.sternBrædt_Længde = sternBrædt_Længde;
+        this.Vindskede_længde = Vindskede_længde;
+        this.Rem = Rem;
+        this.skruer = skruer;
         this.taghældning = taghældning;
-        this.product_id = product_id;
-        this.ground_id = ground_id;
         this.totalprice = totalprice;
+        this.rem_længde = rem_længde;
+        this.tag_bredde = tag_bredde;
+        this.tag_højde = tag_højde;
+        this.tag_udhæng = tag_udhæng;
+        this.gavl_bræt_længde = gavl_bræt_længde;
+        this.gavl_bræt_højde = gavl_bræt_højde;
+        this.gavl_bræt_bredde = gavl_bræt_bredde;
+        this.product_id = product_id;
     }
 
-    public Carport(String carport_name, int antal_Reglar, int antal_spær, int antal_rem, int antal_søm, int antal_Stern, int antal_Lægter, int antal_Skruer, int antal_beslag, int antal_Beklædning, int antal_Vindskede, String tagtype, int taghældning, int product_id, int ground_id, int totalprice) {
-        this.carport_name = carport_name;
-        this.antal_Reglar = antal_Reglar;
-        this.antal_spær = antal_spær;
-        this.antal_rem = antal_rem;
-        this.antal_søm = antal_søm;
-        this.antal_Stern = antal_Stern;
-        this.antal_Lægter = antal_Lægter;
-        this.antal_Skruer = antal_Skruer;
-        this.antal_beslag = antal_beslag;
-        this.antal_Beklædning = antal_Beklædning;
-        this.antal_Vindskede = antal_Vindskede;
-        this.tagtype = tagtype;
+    public Carport(String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_højde, int spær_Længde, int reglar_længde, int lægte_længde, int sternBrædt_Længde, int Vindskede_længde, int Rem, int skruer, int taghældning, double totalprice, int rem_længde, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde, int product_id ) {
+        this.carportName = carportName;
+        this.carportWidth = carportWidth;
+        this.carportLength = carportLength;
+        this.carportHeight = carportHeight;
+        this.stolpe_højde = stolpe_højde;
+        this.spær_Længde = spær_Længde;
+        this.reglar_længde = reglar_længde;
+        this.lægte_længde = lægte_længde;
+        this.sternBrædt_Længde = sternBrædt_Længde;
+        this.Vindskede_længde = Vindskede_længde;
+        this.Rem = Rem;
+        this.skruer = skruer;
         this.taghældning = taghældning;
-        this.product_id = product_id;
-        this.ground_id = ground_id;
         this.totalprice = totalprice;
+        this.rem_længde = rem_længde;
+        this.tag_bredde = tag_bredde;
+        this.tag_højde = tag_højde;
+        this.tag_udhæng = tag_udhæng;
+        this.gavl_bræt_længde = gavl_bræt_længde;
+        this.gavl_bræt_højde = gavl_bræt_højde;
+        this.gavl_bræt_bredde = gavl_bræt_bredde;
+        this.product_id = product_id;
     }
     
     
+    
+    
+
+    public String getCarportName() {
+        return carportName;
+    }
+
+    public void setCarportName(String carportName) {
+        this.carportName = carportName;
+    }
+
+    public int getCarportWidth() {
+        return carportWidth;
+    }
+
+    public void setCarportWidth(int carportWidth) {
+        this.carportWidth = carportWidth;
+    }
+
+    public int getCarportLength() {
+        return carportLength;
+    }
+
+    public void setCarportLength(int carportLength) {
+        this.carportLength = carportLength;
+    }
+
+    public int getCarportHeight() {
+        return carportHeight;
+    }
+
+    public void setCarportHeight(int carportHeight) {
+        this.carportHeight = carportHeight;
+    }
+
+    public int getStolpe_højde() {
+        return stolpe_højde;
+    }
+
+    public void setStolpe_højde(int stolpe_højde) {
+        this.stolpe_højde = stolpe_højde;
+    }
+
+    public int getSpær_Længde() {
+        return spær_Længde;
+    }
+
+    public void setSpær_Længde(int spær_Længde) {
+        this.spær_Længde = spær_Længde;
+    }
 
     public int getCarport_id() {
         return carport_id;
@@ -77,100 +146,52 @@ private int totalprice;
         this.carport_id = carport_id;
     }
 
-    public String getCarport_name() {
-        return carport_name;
+    public int getReglar_længde() {
+        return reglar_længde;
     }
 
-    public void setCarport_name(String carport_name) {
-        this.carport_name = carport_name;
+    public void setReglar_længde(int reglar_længde) {
+        this.reglar_længde = reglar_længde;
     }
 
-    public int getAntal_Reglar() {
-        return antal_Reglar;
+    public int getLægte_længde() {
+        return lægte_længde;
     }
 
-    public void setAntal_Reglar(int antal_Reglar) {
-        this.antal_Reglar = antal_Reglar;
+    public void setLægte_længde(int lægte_længde) {
+        this.lægte_længde = lægte_længde;
     }
 
-    public int getAntal_spær() {
-        return antal_spær;
+    public int getSternBrædt_Længde() {
+        return sternBrædt_Længde;
     }
 
-    public void setAntal_spær(int antal_spær) {
-        this.antal_spær = antal_spær;
+    public void setSternBrædt_Længde(int sternBrædt_Længde) {
+        this.sternBrædt_Længde = sternBrædt_Længde;
     }
 
-    public int getAntal_rem() {
-        return antal_rem;
+    public int getVindskede_længde() {
+        return Vindskede_længde;
     }
 
-    public void setAntal_rem(int antal_rem) {
-        this.antal_rem = antal_rem;
+    public void setVindskede_længde(int Vindskede_længde) {
+        this.Vindskede_længde = Vindskede_længde;
     }
 
-    public int getAntal_søm() {
-        return antal_søm;
+    public int getRem() {
+        return Rem;
     }
 
-    public void setAntal_søm(int antal_søm) {
-        this.antal_søm = antal_søm;
+    public void setRem(int Rem) {
+        this.Rem = Rem;
     }
 
-    public int getAntal_Stern() {
-        return antal_Stern;
+    public int getSkruer() {
+        return skruer;
     }
 
-    public void setAntal_Stern(int antal_Stern) {
-        this.antal_Stern = antal_Stern;
-    }
-
-    public int getAntal_Lægter() {
-        return antal_Lægter;
-    }
-
-    public void setAntal_Lægter(int antal_Lægter) {
-        this.antal_Lægter = antal_Lægter;
-    }
-
-    public int getAntal_Skruer() {
-        return antal_Skruer;
-    }
-
-    public void setAntal_Skruer(int antal_Skruer) {
-        this.antal_Skruer = antal_Skruer;
-    }
-
-    public int getAntal_beslag() {
-        return antal_beslag;
-    }
-
-    public void setAntal_beslag(int antal_beslag) {
-        this.antal_beslag = antal_beslag;
-    }
-
-    public int getAntal_Beklædning() {
-        return antal_Beklædning;
-    }
-
-    public void setAntal_Beklædning(int antal_Beklædning) {
-        this.antal_Beklædning = antal_Beklædning;
-    }
-
-    public int getAntal_Vindskede() {
-        return antal_Vindskede;
-    }
-
-    public void setAntal_Vindskede(int antal_Vindskede) {
-        this.antal_Vindskede = antal_Vindskede;
-    }
-
-    public String getTagtype() {
-        return tagtype;
-    }
-
-    public void setTagtype(String tagtype) {
-        this.tagtype = tagtype;
+    public void setSkruer(int skruer) {
+        this.skruer = skruer;
     }
 
     public int getTaghældning() {
@@ -181,6 +202,70 @@ private int totalprice;
         this.taghældning = taghældning;
     }
 
+    public double getTotalprice() {
+        return totalprice;
+    }
+
+    public void setTotalprice(double totalprice) {
+        this.totalprice = totalprice;
+    }
+
+    public int getRem_længde() {
+        return rem_længde;
+    }
+
+    public void setRem_længde(int rem_længde) {
+        this.rem_længde = rem_længde;
+    }
+
+    public int getTag_bredde() {
+        return tag_bredde;
+    }
+
+    public void setTag_bredde(int tag_bredde) {
+        this.tag_bredde = tag_bredde;
+    }
+
+    public int getTag_højde() {
+        return tag_højde;
+    }
+
+    public void setTag_højde(int tag_højde) {
+        this.tag_højde = tag_højde;
+    }
+
+    public int getTag_udhæng() {
+        return tag_udhæng;
+    }
+
+    public void setTag_udhæng(int tag_udhæng) {
+        this.tag_udhæng = tag_udhæng;
+    }
+
+    public int getGavl_bræt_længde() {
+        return gavl_bræt_længde;
+    }
+
+    public void setGavl_bræt_længde(int gavl_bræt_længde) {
+        this.gavl_bræt_længde = gavl_bræt_længde;
+    }
+
+    public int getGavl_bræt_højde() {
+        return gavl_bræt_højde;
+    }
+
+    public void setGavl_bræt_højde(int gavl_bræt_højde) {
+        this.gavl_bræt_højde = gavl_bræt_højde;
+    }
+
+    public int getGavl_bræt_bredde() {
+        return gavl_bræt_bredde;
+    }
+
+    public void setGavl_bræt_bredde(int gavl_bræt_bredde) {
+        this.gavl_bræt_bredde = gavl_bræt_bredde;
+    }
+
     public int getProduct_id() {
         return product_id;
     }
@@ -189,27 +274,16 @@ private int totalprice;
         this.product_id = product_id;
     }
 
-    public int getGround_id() {
-        return ground_id;
-    }
-
-    public void setGround_id(int ground_id) {
-        this.ground_id = ground_id;
-    }
-
-    public int getTotalprice() {
-        return totalprice;
-    }
-
-    public void setTotalprice(int totalprice) {
-        this.totalprice = totalprice;
-    }
-
     @Override
     public String toString() {
-        return "Carport{" + "carport_id=" + carport_id + ", carport_name=" + carport_name + ", antal_Reglar=" + antal_Reglar + ", antal_sp\u00e6r=" + antal_spær + ", antal_rem=" + antal_rem + ", antal_s\u00f8m=" + antal_søm + ", antal_Stern=" + antal_Stern + ", antal_L\u00e6gter=" + antal_Lægter + ", antal_Skruer=" + antal_Skruer + ", antal_beslag=" + antal_beslag + ", antal_Bekl\u00e6dning=" + antal_Beklædning + ", antal_Vindskede=" + antal_Vindskede + ", tagtype=" + tagtype + ", tagh\u00e6ldning=" + taghældning + ", product_id=" + product_id + ", ground_id=" + ground_id + ", totalprice=" + totalprice + '}';
+        return "Carport{" + "carportName=" + carportName + ", carportWidth=" + carportWidth + ", carportLength=" + carportLength + ", carportHeight=" + carportHeight + ", stolpe_h\u00f8jde=" + stolpe_højde + ", sp\u00e6r_L\u00e6ngde=" + spær_Længde + ", carport_id=" + carport_id + ", reglar_l\u00e6ngde=" + reglar_længde + ", l\u00e6gte_l\u00e6ngde=" + lægte_længde + ", sternBr\u00e6dt_L\u00e6ngde=" + sternBrædt_Længde + ", Vindskede_l\u00e6ngde=" + Vindskede_længde + ", Rem=" + Rem + ", skruer=" + skruer + ", tagh\u00e6ldning=" + taghældning + ", totalprice=" + totalprice + ", rem_l\u00e6ngde=" + rem_længde + ", tag_bredde=" + tag_bredde + ", tag_h\u00f8jde=" + tag_højde + ", tag_udh\u00e6ng=" + tag_udhæng + ", gavl_br\u00e6t_l\u00e6ngde=" + gavl_bræt_længde + ", gavl_br\u00e6t_h\u00f8jde=" + gavl_bræt_højde + ", gavl_br\u00e6t_bredde=" + gavl_bræt_bredde + ", product_id=" + product_id + '}';
     }
     
+    
+    
+
+  
+
 
 
 

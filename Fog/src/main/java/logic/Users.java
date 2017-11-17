@@ -17,23 +17,19 @@ public class Users {
     private String user_email;
     private String firstName;
     private String lastName;
-    private String streetName;
-    private int streetNumber;
     private String city;
     private String zipCode;
     private String phone;
     private String address;
 
-    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String streetName, int streetNumber, String city, String zipCode, String phone,String address) {
+    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String city, String zipCode, String phone,String address) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_password = user_password;
         this.user_email = user_email;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.streetName = streetName;
-        this.streetNumber = streetNumber;
-        this.city = city;
+         this.city = city;
         this.zipCode = zipCode;
         this.phone = phone;
         this.address = address;
@@ -87,21 +83,7 @@ public class Users {
         this.lastName = lastName;
     }
 
-    public String getStreetName() {
-        return streetName;
-    }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
-    }
-
-    public int getStreetNumber() {
-        return streetNumber;
-    }
-
-    public void setStreetNumber(int streetNumber) {
-        this.streetNumber = streetNumber;
-    }
 
     public String getCity() {
         return city;
@@ -137,10 +119,10 @@ public class Users {
 
     @Override
     public String toString() {
-        return "Users{" + "user_id=" + user_id + ", user_name=" + user_name + ", user_password=" + user_password + ", user_email=" + user_email + ", firstName=" + firstName + ", lastName=" + lastName + ", streetName=" + streetName + ", streetNumber=" + streetNumber + ", city=" + city + ", zipCode=" + zipCode + ", phone=" + phone + ", address=" + address + '}';
+        return "Users{" + "user_id=" + user_id + ", user_name=" + user_name + ", user_password=" + user_password + ", user_email=" + user_email + ", firstName=" + firstName + ", lastName=" + lastName + ", city=" + city + ", zipCode=" + zipCode + ", phone=" + phone + ", address=" + address + '}';
     }
 
-    
+   
     
     
     
