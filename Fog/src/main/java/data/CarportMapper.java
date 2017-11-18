@@ -24,6 +24,7 @@ public class CarportMapper {
             PreparedStatement ps = data.DataBase.getConnection().prepareStatement(SQL);{
         
     }
+        return null;
     }
     public static void storeCarport(Carport cp) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
