@@ -1,9 +1,6 @@
 data\ProductMapper.class
-logic\Calculator.class
 logic\Admin.class
 data\DataBase.class
-logic\Carport.class
 logic\Employee.class
 logic\Users.class
 logic\Product.class
-data\CarportMapper.class

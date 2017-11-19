@@ -6,6 +6,7 @@
 package logic;
 
 import data.CarportMapper;
+import java.sql.SQLException;
 
 /**
  *
@@ -13,22 +14,21 @@ import data.CarportMapper;
  */
 public class Calculator {
 
-    public void calculator(Carport c, Product p) {
+    public void calculator(Carport c, Product p) throws SQLException {
         
        // 
         String carportName = c.getCarportName();
         int carportWidth = c.getCarportWidth();
         int carportLength = c.getCarportLength();
         int carportHeight = c.getCarportHeight();
-        int stolpe_højde = c.getStolpe_højde();
+//        int stolpe = c.getStolpe();
         int spær_Længde = c.getSpær_Længde();
         int carport_id = c.getCarport_id();
         int reglar_længde = c.getReglar_længde();
         int lægte_længde = c.getLægte_længde();
-        int sternbrædt_Længde = c.getSternBrædt_Længde();
+        int sternbræt_Længde = c.getSternBræt_Længde();
         int vindskede_længde = c.getVindskede_længde();
-        int rem = c.getRem();
-        int skruer = c.getSkruer();
+        int skruer_Antal = c.getSkruer_Antal();
         int taghældning = c.getTaghældning();
         int rem_længde = c.getRem_længde();
         int tag_bredde = c.getTag_bredde();
@@ -49,16 +49,17 @@ public class Calculator {
         double sternbrætPris = p.getProductPrice();
         
             // beregner materialemængde
-        int stolpe_Antal = (((((carportLength / 300) - '%' + 2) * 2) + (carportWidth / 300) - '%') * 2);
-        int lægte_Antal = (rem_længde / 89 - '%' +1);
+        int stolpe_længde = carportHeight - tag_højde +90;    
+        int stolpe_Antal =((((carportLength / 300) + 2) * 2) + (carportWidth / 300) * 2);
+        int lægte_Antal = rem_længde / 89  +1;
         int rem_Antal = ((carportLength * 2) / rem_længde);
-        int spær_Antal = (rem_længde / 90 - '%' + 1);
-        int reglar_Antal = (tag_bredde / 50 - '%' + 1);
-        int gavl_brædde_Antal = (tag_højde / 2 * (tag_udhæng + carportWidth) / (gavl_bræt_længde * gavl_bræt_højde * gavl_bræt_bredde) - '%');
+        int spær_Antal = rem_længde / 90  + 1;
+        int reglar_Antal = tag_bredde / 50  + 1;
+        int gavl_brædde_Antal = (tag_højde / 2 * (tag_udhæng + carportWidth) / (gavl_bræt_længde * gavl_bræt_højde * gavl_bræt_bredde) );
         int vindskede_Antal = (int) ((Math.sqrt(Math.pow(((tag_udhæng + carportWidth) / 2), 2) + Math.pow(tag_højde, 2))) / vindskede_længde);
-        int sternbræt_Antal = ((carportLength + tag_udhæng) + (carportWidth + tag_udhæng) / sternbrædt_Længde);
+        int sternbræt_Antal = ((carportLength + tag_udhæng) + (carportWidth + tag_udhæng) / sternbræt_Længde);
         int total_træ_Antal = (stolpe_Antal + lægte_Antal + rem_Antal + spær_Antal + vindskede_Antal + sternbræt_Antal + gavl_brædde_Antal + reglar_Antal);
-        int skruer_Antal = total_træ_Antal * 6;
+        int total_skruer_Antal = total_træ_Antal * 6;
         
         
                //beregner priser ud fra materialemængde
@@ -74,8 +75,8 @@ public class Calculator {
         double totalPris = carportPris *1.25;
                 
         
-          Carport cp = new Carport(carportName, carportWidth, carportLength, carportHeight, stolpe_højde, spær_Længde, carport_id, reglar_længde, lægte_længde, sternbrædt_Længde, vindskede_længde, rem, skruer, taghældning, totalPris, rem_længde, carportPris,tag_bredde, tag_højde, tag_udhæng, gavl_bræt_længde, gavl_bræt_højde, gavl_bræt_bredde);
+          Carport cp = new Carport(carportName, carportWidth, carportLength, carportHeight, stolpe_længde, spær_Længde, carport_id, reglar_længde, lægte_længde, sternbræt_Længde, vindskede_længde, total_skruer_Antal, taghældning, totalPris, rem_længde, carportPris,tag_bredde, tag_højde, tag_udhæng, gavl_bræt_længde, gavl_bræt_højde, gavl_bræt_bredde);
         CarportMapper.storeCarport(cp);
     }
-//       
+      
 }

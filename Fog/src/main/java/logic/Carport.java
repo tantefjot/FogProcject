@@ -16,14 +16,14 @@ public class Carport {
         private int carportWidth;
         private int carportLength;
         private int carportHeight;
-        private int stolpe_højde;
+        private int stolpe_længde;
         private int spær_Længde;
         private int reglar_længde;
         private int lægte_længde;
-        private int sternBrædt_Længde;
+        private int sternBræt_Længde;
         private int Vindskede_længde; 
-        private int Rem;
-        private int skruer;
+        private int skruer_Antal;
+        private int total_skruer_Antal;
         private int taghældning;
         private int rem_længde;
         private int tag_bredde;
@@ -35,20 +35,19 @@ public class Carport {
         private double carportPris;
         private double totalPris;
 
-    public Carport(int carport_id, String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_højde, int spær_Længde, int reglar_længde, int lægte_længde, int sternBrædt_Længde, int Vindskede_længde, int Rem, int skruer, int taghældning, int rem_længde, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde, double carportPris, double totalpris) {
+    public Carport(int carport_id, String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_længde, int spær_Længde, int reglar_længde, int lægte_længde, int sternBræt_Længde, int Vindskede_længde, int skruer_Antal, int taghældning, int rem_længde, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde, double carportPris, double totalPris) {
         this.carport_id = carport_id;
         this.carportName = carportName;
         this.carportWidth = carportWidth;
         this.carportLength = carportLength;
         this.carportHeight = carportHeight;
-        this.stolpe_højde = stolpe_højde;
+        this.stolpe_længde = stolpe_længde;
         this.spær_Længde = spær_Længde;
         this.reglar_længde = reglar_længde;
         this.lægte_længde = lægte_længde;
-        this.sternBrædt_Længde = sternBrædt_Længde;
+        this.sternBræt_Længde = sternBræt_Længde;
         this.Vindskede_længde = Vindskede_længde;
-        this.Rem = Rem;
-        this.skruer = skruer;
+        this.skruer_Antal = skruer_Antal;
         this.taghældning = taghældning;
         this.rem_længde = rem_længde;
         this.tag_bredde = tag_bredde;
@@ -58,10 +57,10 @@ public class Carport {
         this.gavl_bræt_højde = gavl_bræt_højde;
         this.gavl_bræt_bredde = gavl_bræt_bredde;
         this.carportPris = carportPris;
-        this.totalPris = totalpris;
+        this.totalPris = totalPris;
     }
 
-    Carport(String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_højde, int spær_Længde, int carport_id, int reglar_længde, int lægte_længde, int sternbrædt_Længde, int vindskede_længde, int rem, int skruer, int taghældning, double totalPris, int rem_længde, double carportPris, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde) {
+    Carport(String carportName, int carportWidth, int carportLength, int carportHeight, int stolpe_højde, int spær_Længde, int carport_id, int reglar_længde, int lægte_længde, int sternbræt_Længde, int vindskede_længde, int skruer_Antal, int taghældning, double totalPris, int rem_længde, double carportPris, int tag_bredde, int tag_højde, int tag_udhæng, int gavl_bræt_længde, int gavl_bræt_højde, int gavl_bræt_bredde) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -105,12 +104,12 @@ public class Carport {
         this.carportHeight = carportHeight;
     }
 
-    public int getStolpe_højde() {
-        return stolpe_højde;
+    public int getStolpe_længde() {
+        return stolpe_længde;
     }
 
-    public void setStolpe_højde(int stolpe_højde) {
-        this.stolpe_højde = stolpe_højde;
+    public void setStolpe_længde(int stolpe_længde) {
+        this.stolpe_længde = stolpe_længde;
     }
 
     public int getSpær_Længde() {
@@ -137,12 +136,12 @@ public class Carport {
         this.lægte_længde = lægte_længde;
     }
 
-    public int getSternBrædt_Længde() {
-        return sternBrædt_Længde;
+    public int getSternBræt_Længde() {
+        return sternBræt_Længde;
     }
 
-    public void setSternBrædt_Længde(int sternBrædt_Længde) {
-        this.sternBrædt_Længde = sternBrædt_Længde;
+    public void setSternBræt_Længde(int sternBræt_Længde) {
+        this.sternBræt_Længde = sternBræt_Længde;
     }
 
     public int getVindskede_længde() {
@@ -153,20 +152,12 @@ public class Carport {
         this.Vindskede_længde = Vindskede_længde;
     }
 
-    public int getRem() {
-        return Rem;
+    public int getSkruer_Antal() {
+        return skruer_Antal;
     }
 
-    public void setRem(int Rem) {
-        this.Rem = Rem;
-    }
-
-    public int getSkruer() {
-        return skruer;
-    }
-
-    public void setSkruer(int skruer) {
-        this.skruer = skruer;
+    public void setSkruer_Antal(int skruer_Antal) {
+        this.skruer_Antal = skruer_Antal;
     }
 
     public int getTaghældning() {
@@ -241,18 +232,18 @@ public class Carport {
         this.carportPris = carportPris;
     }
 
-    public double getTotalpris() {
+    public double getotalPris() {
         return totalPris;
     }
 
-    public void setTotalpris(double totalpris) {
-        this.totalPris = totalpris;
+    public void setTotalPris(double totalPris) {
+        this.totalPris = totalPris;
     }
 
-    @Override
-    public String toString() {
-        return "Carport{" + "carport_id=" + carport_id + ", carportName=" + carportName + ", carportWidth=" + carportWidth + ", carportLength=" + carportLength + ", carportHeight=" + carportHeight + ", stolpe_h\u00f8jde=" + stolpe_højde + ", sp\u00e6r_L\u00e6ngde=" + spær_Længde + ", reglar_l\u00e6ngde=" + reglar_længde + ", l\u00e6gte_l\u00e6ngde=" + lægte_længde + ", sternBr\u00e6dt_L\u00e6ngde=" + sternBrædt_Længde + ", Vindskede_l\u00e6ngde=" + Vindskede_længde + ", Rem=" + Rem + ", skruer=" + skruer + ", tagh\u00e6ldning=" + taghældning + ", rem_l\u00e6ngde=" + rem_længde + ", tag_bredde=" + tag_bredde + ", tag_h\u00f8jde=" + tag_højde + ", tag_udh\u00e6ng=" + tag_udhæng + ", gavl_br\u00e6t_l\u00e6ngde=" + gavl_bræt_længde + ", gavl_br\u00e6t_h\u00f8jde=" + gavl_bræt_højde + ", gavl_br\u00e6t_bredde=" + gavl_bræt_bredde + ", carportPris=" + carportPris + ", totalpris=" + totalPris + '}';
+   
     }
+
+   
         
 
-}
+
