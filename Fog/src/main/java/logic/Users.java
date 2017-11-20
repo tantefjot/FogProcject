@@ -19,11 +19,11 @@ public class Users {
     private String lastName;
     private String streetName;
     private int streetNumber;
-    private int city;
+    private String city;
     private int zipCode;
     private int phone;
 
-    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String streetName, int streetNumber, int city, int zipCode, int phone) {
+    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String streetName, int streetNumber, String city, int zipCode, int phone) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_password = user_password;
@@ -35,6 +35,14 @@ public class Users {
         this.city = city;
         this.zipCode = zipCode;
         this.phone = phone;
+    }
+
+    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String city, int zipCode, int phone, String address) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Users(int user_id, String user_name, String user_password, String user_email, String firstName, String lastName, String city, String zipCode, String phone, String address) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getUser_id() {
@@ -101,11 +109,11 @@ public class Users {
         this.streetNumber = streetNumber;
     }
 
-    public int getCity() {
+    public String getCity() {
         return city;
     }
 
-    public void setCity(int city) {
+    public void setCity(String city) {
         this.city = city;
     }
 
@@ -123,6 +131,10 @@ public class Users {
 
     public void setPhone(int phone) {
         this.phone = phone;
+    }
+
+    public String getAddress() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
  
