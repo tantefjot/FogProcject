@@ -20,7 +20,7 @@ import java.util.List;
 public class Usermapper {
 
     public void creatNewUser(Users u) {
-  int user_id = u.getUser_id();
+
  String user_name = u.getUser_name();
  String user_password = u.getUser_password();
   String user_email = u.getUser_email();
@@ -33,18 +33,18 @@ public class Usermapper {
    
    
         try {
-            String sql = "INSERT INTO users (user_id,userName, userPassword, email,fristname,lastname,city,zipcode,phone,address) values(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "INSERT INTO users (userName, userPassword, email,fristname,lastname,city,zipcode,phone,address) values(?,?,?,?,?,?,?,?,?)";
             PreparedStatement ps = data.DataBase.getConnection().prepareStatement(sql);
-            ps.setInt(1, user_id);
-            ps.setString(2, user_name);
-            ps.setString(3, user_password);
-            ps.setString(4, user_email);
-            ps.setString(5, firstName);
-            ps.setString(6, lastName);
-            ps.setString(7, city);
-            ps.setString(8, zipCode);
-            ps.setString(9, phone);
-            ps.setString(10, address);
+            
+            ps.setString(1, user_name);
+            ps.setString(2, user_password);
+            ps.setString(3, user_email);
+            ps.setString(4, firstName);
+            ps.setString(5, lastName);
+            ps.setString(6, city);
+            ps.setString(7, zipCode);
+            ps.setString(8, phone);
+            ps.setString(9, address);
             ps.executeUpdate();
         } catch (Exception e) {
         }
@@ -135,9 +135,9 @@ public class Usermapper {
     public static void main(String[] args) {
         Usermapper um = new Usermapper();
         
-       
-    
-     
+       Users u = new Users("hans", "hans123", "hans@gmail.com", "hans", "hansen", "blåovre", "2647", "23456789", "bålovrevej 17");
+
+     um.creatNewUser(u);
     }
 
 }

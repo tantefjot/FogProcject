@@ -126,6 +126,10 @@ public class CarportMapper {
     public static void main(String[] args) {
         CarportMapper cm = new CarportMapper();
 
+    Carport c = new Carport("hans", 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1.2, 1, 1, 1, 2, 1, 1, 1, 1);
+    cm.creatNewCarport(c);
+    
+    
     }
 
 }

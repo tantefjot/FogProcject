@@ -42,8 +42,7 @@ public class Carport {
         this.carportHeight = carportHeight;
         this.stolpe_højde = stolpe_højde;
         this.spær_Længde = spær_Længde;
-        this.carport_id = carport_id;
-        this.reglar_længde = reglar_længde;
+       this.reglar_længde = reglar_længde;
         this.lægte_længde = lægte_længde;
         this.sternBrædt_Længde = sternBrædt_Længde;
         this.Vindskede_længde = Vindskede_længde;

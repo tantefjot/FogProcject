@@ -35,6 +35,21 @@ public class Users {
         this.address = address;
     }
 
+    public Users(String user_name, String user_password, String user_email, String firstName, String lastName, String city, String zipCode, String phone, String address) {
+        this.user_name = user_name;
+        this.user_password = user_password;
+        this.user_email = user_email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.phone = phone;
+        this.address = address;
+    }
+    
+    
+    
+
     public int getUser_id() {
         return user_id;
     }
