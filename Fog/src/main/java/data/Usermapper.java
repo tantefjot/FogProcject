@@ -135,9 +135,9 @@ public class Usermapper {
     public static void main(String[] args) {
         Usermapper um = new Usermapper();
         
-       Users u = new Users("hans", "hans123", "hans@gmail.com", "hans", "hansen", "blåovre", "2647", "23456789", "bålovrevej 17");
+//      
 
-     um.creatNewUser(u);
+        System.out.println(um.getSingelUser(1));
     }
 
 }

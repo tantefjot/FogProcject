@@ -97,6 +97,13 @@ public Employee empolyeeLogin(String emp_username,String emp_password) throws SQ
 }
 
 
+ public void deleteEmployee(int id) throws SQLException {
+        String sql = "DELETE FROM empolyee WHERE employee_id = ? " + id + ";";
+        PreparedStatement ps = data.DataBase.getConnection().prepareStatement(sql);
+        ps.execute();
+    }
+
+
     public static void main(String[] args) throws SQLException {
         EmployeeMapper em = new EmployeeMapper();
        // em.creatNewEmpolyee("Hans123", "h123", "Hans", "Hansen");
