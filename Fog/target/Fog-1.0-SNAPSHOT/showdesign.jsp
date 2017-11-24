@@ -10,18 +10,23 @@
 <!DOCTYPE html>
 <html>
     <head>
+      
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
     <body>
         <h1>Hello World!</h1>
-      
-        user design by designid <%out.print(session.getAttribute("designid"));%>
-     <h3>your height</h3><%out.print(session.getAttribute("height"));%>
-        <h3>your length</h3> <%out.print(session.getAttribute("length"));%>
-        <h3>your width</h3>  <%out.print(session.getAttribute("width"));%>
-        <h3>your designame</h3> <%out.print(session.getAttribute("desingname"));%>
-        <h3> your id</h3> <%out.print(session.getAttribute("userid"));%>
+      <% Design design = new Design();%>
+      user design by designid <%out.print(session.getAttribute("designid"));%>
+     <h3> height</h3><%out.print(design.getHeight());%>
+        <h3> length</h3> <%out.print(design.getLength());%>
+        <h3> width</h3>  <%out.print(design.getWidth());%>
+        <h3> designame</h3> <%out.print(design.getName());%>
+        <h3> id</h3> <%out.print(design.getUser_id());%><br>
         
+        godkend design <button> godkend</button><br>
+        avis design <button> avis</button><br>
+        ret og send tilbage til kunden <button> ret og send</button><br>
+       
     </body>
 </html>

@@ -16,7 +16,7 @@
      
         
         <h1>Her er dit design</h1
-        <% Design design = new Design();%>
+       
         <h3>your height</h3><%out.print(session.getAttribute("height"));%>
         <h3>your length</h3> <%out.print(session.getAttribute("length"));%>
         <h3>your width</h3>  <%out.print(session.getAttribute("width"));%>
