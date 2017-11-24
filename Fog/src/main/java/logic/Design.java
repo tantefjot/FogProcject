@@ -17,6 +17,11 @@ public class Design {
    private String name;
    private int user_id;
 
+    public Design() {
+    }
+   
+   
+
     public Design(int id, double length, double width, double height, String name, int user_id) {
         this.id = id;
         this.length = length;

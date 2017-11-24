@@ -132,12 +132,17 @@ public class Usermapper {
     }
     
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Usermapper um = new Usermapper();
         
 //      
-
-        System.out.println(um.getSingelUser(1));
+//Users u = new Users("user_name", "user_password", "user_email", "firstName", "lastName", "city", "zipCode", "phone", "address");
+//        um.creatNewUser(u);
+    
+    for(Users use : um.getAllUsers()){
+        System.out.println(use);
+    }
+    
     }
 
 }

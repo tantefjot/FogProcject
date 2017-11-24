@@ -60,6 +60,30 @@ public Design getSignleDesign(int id){
     return design;
 }
 
+
+public Design getDesignbyuserid(int id){
+    Design design = null;
+    try {
+        String sql = "select * from design where user_id = ?";
+        PreparedStatement ps = DataBase.getConnection().prepareStatement(sql);
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+          int design_id = rs.getInt("design_id");
+          double length = rs.getDouble("length");
+          double width = rs.getDouble("width");
+          double height = rs.getDouble("height");
+          String name = rs.getString("designName");
+          int user_id = rs.getInt("user_id");
+          design = new Design(design_id, length, width, height, name, user_id);
+        }
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return design;
+}
+
+
 public void creatNewDesign( double length, double width, double  height, String name, int user_id) throws SQLException{
     String sql = "insert into design (length,width,height,designName,user_id) values(?,?,?,?,?)";
     PreparedStatement ps = DataBase.getConnection().prepareStatement(sql);
@@ -85,6 +109,6 @@ public void creatNewDesign( double length, double width, double  height, String 
 //          System.out.println(design);
 //      }
 
-        System.out.println(dm.getSignleDesign(1));
+        System.out.println(dm.getDesignbyuserid(1));
     }
 }

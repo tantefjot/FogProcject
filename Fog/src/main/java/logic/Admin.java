@@ -11,11 +11,47 @@ package logic;
  */
 public class Admin {
     
-    final private String usereName = "Admin";
-    final private String password = "FOGADMIN";
+    private int id;
+    private String usereName;
+     private String password ;
 
-     {
+    public Admin(int id, String usereName, String password) {
+        this.id = id;
+        this.usereName = usereName;
+        this.password = password;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUsereName() {
+        return usereName;
+    }
+
+    public void setUsereName(String usereName) {
+        this.usereName = usereName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "Admin{" + "id=" + id + ", usereName=" + usereName + ", password=" + password + '}';
+    }
+
+     
+    
     
     
 }
